@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080d18">
+    <title>NEXUS TOOLBOX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<div class="app">
+
+    <header class="topbar">
+        <div>
+            <div class="brand">NEXUS<span>.</span></div>
+            <p class="subtitle">SMART TOOLBOX</p>
+        </div>
+        <div class="avatar">N</div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <p id="date">LOADING DATE...</p>
+            <h1>Welcome Back</h1>
+            <p class="muted">Your personal digital toolbox.</p>
+        </section>
+
+        <section class="device-card">
+            <div class="card-top">
+                <span>DEVICE STATUS</span>
+                <span class="live">● ONLINE</span>
+            </div>
+            <div class="device-info">
+                <div>
+                    <h2 id="clock">00:00</h2>
+                    <p>LOCAL TIME</p>
+                </div>
+                <div class="device-icon">◈</div>
+            </div>
+            <div class="status-line"></div>
+            <p class="device-footer">NEXUS SYSTEM V1.0</p>
+        </section>
+
+        <section class="tools-section">
+            <div class="section-heading">
+                <h2>Quick Tools</h2>
+                <span>01 / 08</span>
+            </div>
+
+            <div class="tools-grid">
+                <button class="tool" onclick="openTool('calculator')">
+                    <span class="tool-icon">＋</span>
+                    <span>Calculator</span>
+                </button>
+
+                <button class="tool" onclick="openTool('notes')">
+                    <span class="tool-icon">▤</span>
+                    <span>Notes</span>
+                </button>
+
+                <button class="tool" onclick="openTool('timer')">
+                    <span class="tool-icon">◷</span>
+                    <span>Stopwatch</span>
+                </button>
+
+                <button class="tool" onclick="openTool('battery')">
+                    <span class="tool-icon">▣</span>
+                    <span>Battery</span>
+                </button>
+
+                <button class="tool" onclick="openTool('internet')">
+                    <span class="tool-icon">⌁</span>
+                    <span>Internet</span>
+                </button>
+
+                <button class="tool" onclick="openTool('flashlight')">
+                    <span class="tool-icon">☼</span>
+                    <span>Flashlight</span>
+                </button>
+
+                <button class="tool" onclick="openTool('device')">
+                    <span class="tool-icon">▦</span>
+                    <span>Device Info</span>
+                </button>
+
+                <button class="tool" onclick="openTool('settings')">
+                    <span class="tool-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="workspace" class="workspace">
+            <p>SELECT A TOOL</p>
+            <h2>Ready when you are.</h2>
+            <span>Choose any tool above to get started.</span>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="active">⌂<span>Home</span></button>
+        <button onclick="openTool('notes')">▤<span>Notes</span></button>
+        <button onclick="openTool('settings')">⚙<span>Settings</span></button>
+    </nav>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
