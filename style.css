@@ -1,0 +1,264 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080d18;
+    --card: #111a2b;
+    --card2: #152137;
+    --blue: #28a9ff;
+    --cyan: #35e0e8;
+    --text: #f2f6ff;
+    --muted: #8391a8;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.app {
+    max-width: 600px;
+    margin: auto;
+    padding: 24px 20px 100px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+}
+
+.brand {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.brand span {
+    color: var(--cyan);
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.avatar {
+    width: 43px;
+    height: 43px;
+    border: 1px solid #247db9;
+    background: #13263c;
+    color: var(--cyan);
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome > p:first-child {
+    color: var(--cyan);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.device-card {
+    background: linear-gradient(135deg, #142e4c, #101a2d 75%);
+    border: 1px solid #234565;
+    border-radius: 22px;
+    padding: 22px;
+    margin-bottom: 35px;
+    box-shadow: 0 12px 40px #0005;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #a9bdd4;
+}
+
+.live {
+    color: #44e5aa;
+}
+
+.device-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 0;
+}
+
+.device-info h2 {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.device-info p {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.device-icon {
+    font-size: 58px;
+    color: var(--cyan);
+    text-shadow: 0 0 25px #35e0e866;
+}
+
+.status-line {
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+    border-radius: 5px;
+}
+
+.device-footer {
+    color: #8197b1;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+}
+
+.section-heading span {
+    color: var(--cyan);
+    font-size: 10px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.tool {
+    background: var(--card);
+    border: 1px solid #202e43;
+    border-radius: 17px;
+    min-height: 112px;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 18px;
+    gap: 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.tool:hover {
+    border-color: var(--blue);
+    background: var(--card2);
+    transform: translateY(-3px);
+}
+
+.tool-icon {
+    color: var(--cyan);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.workspace {
+    background: #101827;
+    border: 1px solid #202e43;
+    border-radius: 18px;
+    margin-top: 25px;
+    padding: 22px;
+}
+
+.workspace > p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    margin-bottom: 12px;
+}
+
+.workspace h2 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.workspace > span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    height: 72px;
+    background: #101827f5;
+    border-top: 1px solid #26344b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bottom-nav button span {
+    font-size: 10px;
+}
+
+.bottom-nav button.active {
+    color: var(--cyan);
+}
+
+@media (min-width: 500px) {
+    .tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
